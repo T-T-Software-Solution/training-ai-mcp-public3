@@ -19,7 +19,7 @@
         },
         "local-function-mcp-server": {
             "type": "sse",
-            "url": "https://nakornfunctionmcp02window-eecyb6bxfbegfxfe.southeastasia-01.azurewebsites.net/runtime/webhooks/mcp/sse?code=HTfvqz6cSF7tzU7G4GvQX3WIMZudVkrgIPVV6wIZSrJLAzFuwCn69w=="
+            "url": ""
         },
         "local-mcp-server": {
             "type": "sse",
