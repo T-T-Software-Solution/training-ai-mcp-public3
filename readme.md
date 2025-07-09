@@ -38,6 +38,8 @@
 - เชื่อมต่อ MCP ที่ deploy บน Azure Function บน Azure
 - Inspect ดูข้อมูล
 
+http://localhost:6274/?MCP_PROXY_AUTH_TOKEN=[token]#resources
+
 ### LAB01
 - นักเรียนเชื่อมต่อ MCP ที่ deploy บน Azure Function บน Azure ด้วย VS Code
 - นักเรียนเชื่อมต่อ MCP ที่ deploy บน Azure Function บน Azure ด้วย MCP Inspector
