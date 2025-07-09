@@ -1,0 +1,29 @@
+{
+    "servers": {
+        "time": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "mcp/time"
+            ]
+        },
+        "postgres": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-postgres",
+                "postgresql://admin:admin@127.0.0.1:65432/fishprevention"
+            ]
+        },
+        "local-function-mcp-server": {
+            "type": "sse",
+            "url": "https://nakornfunctionmcp02window-eecyb6bxfbegfxfe.southeastasia-01.azurewebsites.net/runtime/webhooks/mcp/sse?code=HTfvqz6cSF7tzU7G4GvQX3WIMZudVkrgIPVV6wIZSrJLAzFuwCn69w=="
+        },
+        "local-mcp-server": {
+            "type": "sse",
+            "url": "http://localhost:5103/sse"
+        }
+    }
+}

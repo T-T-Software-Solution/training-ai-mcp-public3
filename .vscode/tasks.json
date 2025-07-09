@@ -1,0 +1,62 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start MCP inspector",
+			"type": "shell",
+			"command": "npx @modelcontextprotocol/inspector",
+			"problemMatcher": []
+		},
+		{
+			"label": "Start azurite",
+			"type": "shell",
+			"command": "docker run -p 10000:10000 -p 10001:10001 -p 10002:10002 mcr.microsoft.com/azure-storage/azurite",
+			"problemMatcher": []
+		},
+		{
+			"label": "Build solution",
+			"type": "shell",
+			"command": "dotnet build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Start App.Mcp",
+			"type": "shell",
+			"command": "dotnet run",
+			"options": {
+				"cwd": "${workspaceFolder}/Presentations/App.Mcp"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Start App.Function",
+			"type": "shell",
+			"command": "func start",
+			"options": {
+				"cwd": "${workspaceFolder}/Presentations/App.Function"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Start App.Console",
+			"type": "shell",
+			"command": "dotnet run",
+			"options": {
+				"cwd": "${workspaceFolder}/Presentations/App.Console"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Start App.Api",
+			"type": "shell",
+			"command": "dotnet run",
+			"options": {
+				"cwd": "${workspaceFolder}/Presentations/App.Api"
+			},
+			"problemMatcher": []
+		}
+	]
+}
